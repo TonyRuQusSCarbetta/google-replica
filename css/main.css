@@ -1,33 +1,47 @@
-/*SITEWIDE STYLE RESETS*/
-/*select ALL HTML ELEMENTS - seriously be careful with this one*/
+/*Sitewide Styles*/
+/*select all things - seriously use this one very wisely*/
 * {
+	/*change the default color of all elements to black*/
 	color: #000;
 }
-/*select any body element - normally there is just one*/
+/*select the body tag*/
 body {
+	background: none repeat scroll 0 0 #fff;
+	/*change the text color to light blackish*/
   color: #222222;
+  /*set default margin to 0 - becuase every browser has a different default*/
   margin:0;
 }
-/*select any anchor element*/
+/*select all anchor tags*/
 a {
+	/*change the text color to light blackish*/
 	color:#222222;
+	/*remove default underline*/
 	text-decoration: none;
 }
-/*select any anchor elements that are hovered over*/
+/*select all anchor tags that are hovered on*/
 a:hover {
+	/*change color on hover*/
 	color: #222222;
+	/*add underline when user hovers*/
 	text-decoration: underline;
+}
+/*select all anchor tags that have a class of button and are hovered on*/
+a.button:hover {
+	/*remove underline from hovered on buttons*/
+	text-decoration: none;
 }
 
 
-/*TOP SECTION - NAVIGATION*/
-/*select any ul element with a class of nav*/
-ul.nav{
+
+/*Top Section - Navigation*/
+/*select any elements with a class of top-navigation*/
+.top-navigation {
 	float:right;
 	margin-right: 25px;
 }
-/*select any li element, nested inside of any ul element with a class of nav*/
-ul.nav li{
+/*select any elements with a class of top-navigation and find any li tags inside those*/
+.top-navigation li{
 	list-style: none;
 	display: inline-block;
 	text-align: right;
@@ -36,31 +50,31 @@ ul.nav li{
 	margin: 5px 5px 0 0;
 	font-size: 13px;
 }
-/*select any div element with a class of fa*/
-div.fa {
+/*select the font awesome standard class to change the icons*/
+.fa {
 	font-size: 20px;
 	vertical-align: top;
 	opacity: 0.7;
 	cursor: default;
 }
-/*select any div elements with a class of fa that are hovered over*/
-div.fa:hover {
+/*select the font awesome icons on hover*/
+.fa:hover {
 	opacity: 1.0;
 }
-/*select any span elements with a class of share*/
-span.share {
+/*select any elements with a class of share-button*/
+.share-button {
 	background-color: #f2f2f2;
 	padding:7px 15px;
 	cursor: default;
 	position: relative;
-	top: -3px;
+  top: -3px;
 }
-/*select any span elements with a class of share that are hovered over*/
-span.share:hover {
-	background-color: #e1e1e1;
+/*select any elements with a class of share-button that is hovered on*/
+.share-button:hover {
+	background-color: #E1E1E1;
 }
-/*select any img elements with a class of profile_img*/
-img.profile_img {
+/*select any elements with a class of profile-img*/
+.profile-img {
 	border-radius: 25px;
 	height: 32px;
   width: 32px;
@@ -69,21 +83,22 @@ img.profile_img {
 }
 
 
-/*MIDDLE SECTION - SEARCH BOX*/
-/*select any div element with a class of searchBox*/
-div.searchBox {
+
+/*Middle Section - Search Box*/
+/*select any elements with a class of search-box*/
+.search-box {
 	position: absolute;
 	margin-top:75px;
 	width:100%;
 }
-/*select any img element, nested inside of any div element with a class of searchBox*/
-div.searchBox img {
+/*select any elements with a class of search-box and then find any img tags inside*/
+.search-box img {
 	padding:142px 0 24px 0;
 	display: block;
 	margin:0 auto;
 }
-/*select any input element, nested inside of any div element with a class of searchBox*/
-div.searchBox input {
+/*select any elements with a class of search-box and then find any input tags inside*/
+.search-box input {
 	width: 600px;
   margin: 0 auto;
   padding: 5px;
@@ -92,17 +107,17 @@ div.searchBox input {
   border-radius: 5px;
   display: block;
 }
-/*select any input element that is focused on, nested inside of any div element with a class of searchBox*/
-div.searchBox input:focus {
+/*select any elements with a class of search-box and then find any input tags inside that are currently focused*/
+.search-box input:focus {
 	border-color: #f5f5f5;
 }
-/*select any div element with a class of buttons*/
-div.buttons  {
+/*select any elements with a class of search-buttons*/
+.search-buttons  {
 	text-align: center;
 	padding-left: 0;
 }
-/*select any button element, nested inside of any div element with a class of buttons*/
-div.buttons button{
+/*select any elements with a class of search-buttons and find all button tags inside*/
+.search-buttons button{
   background-color: #f5f5f5;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
@@ -115,8 +130,8 @@ div.buttons button{
   display: inline-block;
   cursor: pointer;
 }
-/*select any button element that is hovered on, nested inside of any div element with a class of buttons*/
-div.buttons button:hover{
+/*select any elements with a class of search-buttons and find all button tags inside that are hovered on*/
+.search-button button:hover{
 	background-color:#f8f8f8;
 	border: 1px solid #c6c6c6;
   box-shadow:0 1px 1px rgba(0,0,0,0.1);
@@ -125,51 +140,101 @@ div.buttons button:hover{
 
 
 
-/*BOTTOM SECTION - MORE SITE LINKS*/
-/*select any div element with a class of bottom*/
-div.bottom {
+/*Bottom Section - Site Links*/
+/*select any elements with a class of button-site-links*/
+.bottom-site-links {
 	bottom: 0 !important;
 	position: absolute;
 	width:100%;
 	background-color: #f2f2f2;
 	border-top: 1px solid #e4e4e4;
 }
-/*select any ul element with a class of left, nested inside of any div element with a class of bottom &&& select any ul element with a class of right, nested inside of any div element with a class of bottom*/
-div.bottom ul.left,
-div.bottom ul.right {
+/*select any elements with a class of left-site-links*/
+.left-site-links,
+/*and select any elements with a class of right-site-links*/
+.right-site-links {
 	margin: 0;
 }
-/*select any ul element with a class of left, nested inside of any div element with a class of bottom*/
-div.bottom ul.left {
+/*select any elements with a class of left-site-links*/
+.left-site-links {
 	float:left;
 	padding-left:20px;
 }
-/*select any ul element with a class of right, nested inside of any div element with a class of bottom*/
-div.bottom ul.right {
+/*select any elements with a class of right-site-links*/
+.right-site-links {
 	float:right;
 	padding-right:10px;
 }
-/*select any li element, nested inside of any ul element with a class of left, nested inside of any div element with a class of bottom &&& select any li element, nested inside of any ul element with a class of right, nested inside of any div element with a class of bottom*/
-div.bottom ul.left li,
-div.bottom ul.right li{
+/*select any elements with a class of left-site-links and find all li tags inside*/
+.left-site-links li,
+/*and select any elements with a class of right-site-links and find all li tags inside*/
+.right-site-links li{
 	list-style: none;
 	display: inline;
 	line-height: 40px;
 }
-/**/
-div.bottom ul.right li a:first-child {
+/*select any elements with a class of right-site-links and find all li tags inside then the 1st anchor tags inside*/
+.right-site-links li a:first-child {
 	padding-right:8px;
 }
-/**/
-div.bottom ul.left li:nth-child(2),
-div.bottom ul.left li:nth-child(3) {
+/*select any elements with a class of left-site-links and find all li tags inside then the 2nd anchor tags inside*/
+.left-site-links li:nth-child(2),
+/*and select any elements with a class of left-site-links and find all li tags inside then the 3rd anchor tags inside*/
+.left-site-links li:nth-child(3) {
 	margin-left:7px;
 }
-/*select any anchor element, nested inside of any li element, nested inside of any ul element with a class of left, nested inside of any div element with a class of bottom &&& select any anchor element, nested inside of any li element, nested inside of any ul element with a class of right, nested inside of any div element with a class of bottom*/
-div.bottom ul.left li a,
-div.bottom ul.right li a {
+/*select any elements with a class of left-site-links and find all li tags inside then all the anchor tags inside*/
+.left-site-links li a,
+/*and select any elements with a class of right-site-links and find all li tags inside then all the anchor tags inside*/
+.right-site-links li a {
 	color: #666666;
   margin: 2px 10px 0;
   letter-spacing: 0.1px;
   font-size: 14px;
+}
+
+
+
+/*===============================
+		MEDIA QUERIES
+===============================*/
+/*screen size no greater than 700px*/
+@media(max-width:700px) {
+	.search-box input {
+		width: 75%;
+	}
+}
+
+/*screen size no greater than 550px*/
+@media(max-width:550px) {
+	.bottom-site-links .left-site-links {
+		padding-left: 10px;
+	}
+
+	.bottom-site-links .right-site-links {
+		padding: 0 10px;
+	}
+}
+
+/*screen size no greater than 500px*/
+@media(max-width:500px) {
+  .top-navigation {
+    float: none;
+    margin: 0 0 0 20px;
+  }
+	.top-navigation ul {
+		margin: 0 auto;
+		padding-left: 0;
+		width: 90%;
+	}
+	.top-navigation li {
+		margin: 0;
+	}
+	.bottom-site-links .right-site-links {
+		padding: 0;
+	}
+  .left-site-links li a, .right-site-links li a {
+    margin: 0;
+    font-size: 14px;
+  }
 }
